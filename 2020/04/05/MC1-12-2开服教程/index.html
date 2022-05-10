@@ -1,111 +1,78 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" class="loading">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <meta name="description" content="注意：电脑需要安装Java8,可以到java.com下载。
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MC1.12.2开服教程(使用CatServer) - 2345Explorer&#39;s Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    
+    <meta name="description" content="注意：电脑需要安装Java8,可以到java.com下载。
 一、下载最新版CatServer下载的应该是CatServer-xxxxxxx-universsal.jar
-二、打开下载文件夹或是这样的:如果是这样的话，把显示扩展名打开，直接百度一下就行了新建一个文本文档,把扩展名改成bat  (批处理" />
-  
+二、打开下载文件夹或是这样的,"> 
+    <meta name="author" content="2345Explorer"> 
+    <link rel="alternative" href="atom.xml" title="2345Explorer&#39;s Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="MC1.12.2开服教程(使用CatServer) - 2345Explorer&#39;s Blog"/>
+    <meta name="twitter:description" content="注意：电脑需要安装Java8,可以到java.com下载。
+一、下载最新版CatServer下载的应该是CatServer-xxxxxxx-universsal.jar
+二、打开下载文件夹或是这样的,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="2345Explorer&#39;s Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="MC1.12.2开服教程(使用CatServer) - 2345Explorer&#39;s Blog"/>
+    <meta property="og:description" content="注意：电脑需要安装Java8,可以到java.com下载。
+一、下载最新版CatServer下载的应该是CatServer-xxxxxxx-universsal.jar
+二、打开下载文件夹或是这样的,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
 
-  
-  
-  
-  
-  
-  
-  <title>MC1.12.2开服教程(使用CatServer) | 2345Explorer&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注意：电脑需要安装Java8,可以到java.com下载。 一、下载最新版CatServer下载的应该是CatServer-xxxxxxx-universsal.jar 二、打开下载文件夹或是这样的:如果是这样的话，把显示扩展名打开，直接百度一下就行了新建一个文本文档,把扩展名改成bat  (批处理文件)右键–&gt;编辑输入java -Xmx&lt;最大内存&gt; -Xms&lt;最小内存&amp;g">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MC1.12.2开服教程(使用CatServer)">
-<meta property="og:url" content="https://2345explorer.github.io/2020/04/05/MC1-12-2%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/index.html">
-<meta property="og:site_name" content="2345Explorer&#39;s Blog">
-<meta property="og:description" content="注意：电脑需要安装Java8,可以到java.com下载。 一、下载最新版CatServer下载的应该是CatServer-xxxxxxx-universsal.jar 二、打开下载文件夹或是这样的:如果是这样的话，把显示扩展名打开，直接百度一下就行了新建一个文本文档,把扩展名改成bat  (批处理文件)右键–&gt;编辑输入java -Xmx&lt;最大内存&gt; -Xms&lt;最小内存&amp;g">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405175221654.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405175401174.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405180025172.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020040518011070.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405180505533.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405180701823.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405181652446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405182756884.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405184004546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405184300455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405184347924.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405184509732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-04-05T10:59:56.000Z">
-<meta property="article:modified_time" content="2022-05-10T05:26:14.085Z">
-<meta property="article:author" content="2345Explorer">
-<meta property="article:tag" content="MC">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200405175221654.png">
-  
-  
-    <link rel="icon" href="https://s2.loli.net/2022/05/10/xzYgHtuWK2UoM5k.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-
-  
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+    <script>window.searchDbPath = "/search.xml";</script>
 <meta name="generator" content="Hexo 6.1.0"></head>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="2345Explorer&#39;s Blog" rel="home">2345Explorer&#39;s Blog</a>
-      </h1>
-      
-        <h2 class="site-description hitokoto"></h2>
-        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
-      
-    </hgroup>
 
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
+<body class="loading">
+    <span id="config-title" style="display:none">2345Explorer&#39;s Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://2345explorer.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">MC1.12.2开服教程(使用CatServer)</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
-    </nav>
-</header>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
 
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-MC1-12-2开服教程" class="post-MC1-12-2开服教程 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title article-title">
-      MC1.12.2开服教程(使用CatServer)
-    </h1>
-  
-
-        
-        <div class="comments-link">
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">MC1.12.2开服教程(使用CatServer)</h1>
+        <div class="stuff">
+            <span>四月 05, 2020</span>
             
-            <a href="javascript:void(0);" data-url="https://2345explorer.github.io/2020/04/05/MC1-12-2%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/" data-id="cl2ztqoqp0003ucvj2i5p7scf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/MC/" rel="tag">MC</a></li></ul>
 
-    <div class="entry-content">
-      
-        <p><strong>注意：电脑需要安装Java8,可以到<a target="_blank" rel="noopener" href="http://www.java.com/">java.com</a>下载。</strong></p>
+
+        </div>
+        <div class="content markdown">
+            <p><strong>注意：电脑需要安装Java8,可以到<a target="_blank" rel="noopener" href="http://www.java.com/">java.com</a>下载。</strong></p>
 <h2 id="一、下载最新版CatServer"><a href="#一、下载最新版CatServer" class="headerlink" title="一、下载最新版CatServer"></a>一、<a target="_blank" rel="noopener" href="https://catmc.org/download/universal">下载最新版CatServer</a></h2><p>下载的应该是<code>CatServer-xxxxxxx-universsal.jar</code></p>
 <h2 id="二、打开下载文件夹"><a href="#二、打开下载文件夹" class="headerlink" title="二、打开下载文件夹"></a>二、打开下载文件夹</h2><p><img src="https://img-blog.csdnimg.cn/20200405175221654.png" alt="CatServer"><br>或是这样的:<br><img src="https://img-blog.csdnimg.cn/20200405175401174.png" alt="CatServer2"><br>如果是这样的话，把显示扩展名打开，直接百度一下就行了<br>新建一个文本文档,把扩展名改成<code>bat</code>  (批处理文件)<br><img src="https://img-blog.csdnimg.cn/20200405180025172.png" alt="在这里插入图片描述"><br>右键–&gt;编辑<br><img src="https://img-blog.csdnimg.cn/2020040518011070.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入<code>java -Xmx&lt;最大内存&gt; -Xms&lt;最小内存&gt; -jar &lt;CatServer名字&gt;.jar</code><br>如果最大内存为6000M，最小内存为2048M，CatServer名字是CatServer<br>那么，应该这么写：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx6000M -Xms2048M -jar CatServer.jar</span><br></pre></td></tr></table></figure>
@@ -129,126 +96,112 @@
 <h2 id="八、让别人也可以连接到你的服务器"><a href="#八、让别人也可以连接到你的服务器" class="headerlink" title="八、让别人也可以连接到你的服务器"></a>八、让别人也可以连接到你的服务器</h2><p>这里需要一个<code>网络映射软件</code>, 网上有很多, 上网搜一下就行了,让别人连映射的网站就行了(别让别人连<code>127.0.0.1</code>或<code>loaclhost</code>).</p>
 <p>好了，要说的就这些了，知道这些应该可以开服了吧……<br>感谢名单:<br><a target="_blank" rel="noopener" href="https://github.com/Luohuayu">CatServer作者</a><br><a target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-840599-1-1.html">MCBBS CatServer介绍</a></p>
 
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/05/MC1-12-2%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/">
-    <time datetime="2020-04-05T10:59:56.000Z" class="entry-date">
-        2020-04-05
-    </time>
-</a>
-    
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MC/" rel="tag">MC</a></li></ul>
-
-    </footer>
-</article>
-
-
-    
-<nav class="nav-single">
-    <h3 class="assistive-text">文章导航</h3>
-    
-        <span class="nav-previous"><a href="/2022/03/11/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE-1/" rel="prev"><span class="meta-nav">←</span> 手工制作使用WinXShell的PE</a></span>
-    
-    
-</nav><!-- .nav-single -->
-
-
-
-
-
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
 
 
-</div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
     </div>
-</form></aside>
-  
     
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2022/05/10/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-%E5%8A%A0%E8%BD%BD%E5%99%A8%E3%80%81%E6%A8%A1%E7%BB%84%E3%80%81%E5%85%89%E5%BD%B1%E3%80%81%E6%9D%90%E8%B4%A8%E5%8C%85%E3%80%81%E6%95%B0%E6%8D%AE%E5%8C%85%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85-%E5%9B%BD%E9%99%85Java%E7%89%88/">MC基础教程#2 加载器、模组、光影、材质包、数据包下载及安装(国际Java版)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/04/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A8%E5%99%A8/">MC基础教程#1-关于启动器</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/11/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE-1/">手工制作使用WinXShell的PE</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/05/MC1-12-2%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/">MC1.12.2开服教程(使用CatServer)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget-content">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MC/" rel="tag">MC</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag">MC基础教程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE/" rel="tag">手工制作使用WinXShell的PE</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </aside>
-
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget-content tagcloud">
-      <a href="/tags/MC/" style="font-size: 20px;">MC</a> <a href="/tags/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 15px;">MC基础教程</a> <a href="/tags/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE/" style="font-size: 10px;">手工制作使用WinXShell的PE</a>
-    </div>
-  </aside>
-
-  
 </div>
-      </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2022 2345Explorer
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
-
-<script src="/js/jquery-3.3.1.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-<script src="/js/navigation.js"></script>
-
-<div id="bg"></div>
-
-  </div>
+    </div>
+</div>
 </body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 </html>
