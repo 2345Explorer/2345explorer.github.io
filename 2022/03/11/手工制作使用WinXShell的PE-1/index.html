@@ -4,15 +4,36 @@
   <meta charset="utf-8">
   
   
-  <title>2345Explorer&#39;s Blog</title>
+  <title>手工制作使用WinXShell的PE | 2345Explorer&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="2345Explorer&#39;s Blog">
-<meta property="og:url" content="https://2345explorer.github.io/index.html">
+  <meta name="description" content="前言众所周知，PE有很多，比如：WePE、优启通、EdgelessPE、FirPE等。当然，这些都是别人做好的。能不能自己做一个？所以就有了这个 提示：因为用的是WinXShell而不是Explorer，最终效果可能不太好看一. 准备1.系统镜像可以从微软、msdn我告诉你和msdn的新版下载。这里使用Windows10 21H2。 2.PECMD原作者提供的官网好像没法用了  官方网址：http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手工制作使用WinXShell的PE">
+<meta property="og:url" content="https://2345explorer.github.io/2022/03/11/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE-1/index.html">
 <meta property="og:site_name" content="2345Explorer&#39;s Blog">
+<meta property="og:description" content="前言众所周知，PE有很多，比如：WePE、优启通、EdgelessPE、FirPE等。当然，这些都是别人做好的。能不能自己做一个？所以就有了这个 提示：因为用的是WinXShell而不是Explorer，最终效果可能不太好看一. 准备1.系统镜像可以从微软、msdn我告诉你和msdn的新版下载。这里使用Windows10 21H2。 2.PECMD原作者提供的官网好像没法用了  官方网址：http">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fbea14a86514482c864b3c5e8a3f667b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/485ccfcef6934515a2864ca2724c5013.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/dab3875a9b2a4edaab617062c8cd8635.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0331cfd0f7314d2d839fd52b5b9740a0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fd00134ca33e404abe75e111a3c5ed35.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_12,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/dcf9c963f0ca4ae4b09c8673831ce3f9.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4d015503091f49b287c5b1971b3f630f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f24d6a825b1c43d3bcaca5820cceaefa.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/61aa6e1f372e411baded054e6f5e9552.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/008bb3922cd541808fea11b053d14a50.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4e762ea846fe4d058cf6fa448fc490e5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f25fe4bedc5449cf944fec7d43afe458.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/8bbbd575d58e41eb8e708c804f5a4c91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/186a66a07bad464e8977290de1db5265.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/af88cad2e58f4970b77b0579934b453f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="article:published_time" content="2022-03-11T14:43:57.000Z">
+<meta property="article:modified_time" content="2022-05-10T03:54:24.427Z">
 <meta property="article:author" content="2345Explorer">
+<meta property="article:tag" content="手工制作使用WinXShell的PE">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fbea14a86514482c864b3c5e8a3f667b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16">
   
     <link rel="alternate" href="/atom.xml" title="2345Explorer's Blog" type="application/atom+xml">
   
@@ -69,64 +90,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-MC基础教程1-关于启动器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/04/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A8%E5%99%A8/" class="article-date">
-  <time class="dt-published" datetime="2022-05-04T13:03:26.000Z" itemprop="datePublished">2022-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/04/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A8%E5%99%A8/">MC基础教程#1-关于启动器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>想玩MC必须要有启动器，没启动器玩不了  (这一点不用说了吧)</p>
-<h1 id="下载Minecraft正版"><a href="#下载Minecraft正版" class="headerlink" title="下载Minecraft正版"></a>下载Minecraft正版</h1><h2 id="手机版"><a href="#手机版" class="headerlink" title="手机版"></a>手机版</h2><p>应用市场&#x2F;App Store等 搜索<code>我的世界</code>，下载<strong>我的世界中国版</strong>(基岩版,BE) 即可。</p>
-<h2 id="电脑版"><a href="#电脑版" class="headerlink" title="电脑版"></a>电脑版</h2><p>除网易版需下载<a target="_blank" rel="noopener" href="http://java.com/">Java8</a>(1.17-)和<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/">Java17+</a>(1.17+)</p>
-<h3 id="一、下载我的世界中国版-网易版"><a href="#一、下载我的世界中国版-网易版" class="headerlink" title="一、下载我的世界中国版( 网易版 )"></a>一、下载我的世界中国版( 网易版 )</h3><p>链接:<a target="_blank" rel="noopener" href="http://mc.163.com/index.html">http://mc.163.com/index.html</a><br>选择<code>立即下载端游</code>下载安装程序。剩下的步骤按着上面说的就行了。<br>然后，到<a target="_blank" rel="noopener" href="https://mail.163.com/register/index.htm">https://mail.163.com/register/index.htm</a>注册网易邮箱，好像还得弄个防沉迷(登录的时候会提示)，然后打开启动器:<br>有的时候会更新，点击<code>立即更新</code>即可。<br><img src="https://img-blog.csdnimg.cn/20200414191118938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>更新之后或没有更新，应该能看到这样的界面:<br><img src="https://img-blog.csdnimg.cn/2020041419122226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入邮箱&amp;密码登录。</p>
-<h3 id="二、下载我的世界国际版-PC版"><a href="#二、下载我的世界国际版-PC版" class="headerlink" title="二、下载我的世界国际版(PC版)"></a>二、下载我的世界国际版(PC版)</h3><p>首先，得有一个微软账号。<a target="_blank" rel="noopener" href="https://login.live.com/">链接</a>(安装Windows时一般会强制注册)<br>然后<a target="_blank" rel="noopener" href="https://www.minecraft.net/zh-hans/store/minecraft-java-edition/buy">购买</a>，下载Minecraft国际版的安装程序，开始安装。<br>Win10&#x2F;11自带的<code>Microsoft Store</code>里也可以下载。<br><img src="https://img-blog.csdnimg.cn/2fdf59b02b244ba4850f237ef84b146b.png"><br>最后，启动Minecraft<br><img src="https://img-blog.csdnimg.cn/20200414192716601.png" alt="在这里插入图片描述"><br>如果是这样的话，说明Minecraft正在更新，等待一会。<br><img src="https://img-blog.csdnimg.cn/1d023a76a90e40d3bb5a57414a579de0.png"><br><img src="https://img-blog.csdnimg.cn/b059e5eb5e9445728a4f4151f21e307e.png"></p>
-<h3 id="第三种方法-购买Minecraft基岩版-PE-电脑版-Win10"><a href="#第三种方法-购买Minecraft基岩版-PE-电脑版-Win10" class="headerlink" title="第三种方法:购买Minecraft基岩版(PE)电脑版(Win10)"></a>第三种方法:购买Minecraft基岩版(PE)电脑版(Win10)</h3><p>打开<code>Microsoft Store</code>( Win10&#x2F;11自带 )，找到<code>Minecraft for Windows</code>，购买。<br><img src="https://img-blog.csdnimg.cn/60b43237f41c4a31a79221f1c53f7a6f.png"></p>
-<h1 id="Minecraft第三方启动器"><a href="#Minecraft第三方启动器" class="headerlink" title="Minecraft第三方启动器"></a>Minecraft第三方启动器</h1><h2 id="1-HMCL-Hello-Minecraft-Luncher"><a href="#1-HMCL-Hello-Minecraft-Luncher" class="headerlink" title="1.HMCL(Hello Minecraft Luncher)"></a>1.HMCL(Hello Minecraft Luncher)</h2><p>下载:<a target="_blank" rel="noopener" href="https://hmcl.huangyuhui.net/">https://hmcl.huangyuhui.net</a>或<a target="_blank" rel="noopener" href="https://github.com/huanghongxun/HMCL/releases">Github</a><br>使用方法:选择下载Windows版本.exe文件或.jar文件。<br>.exe文件直接运行，.jar文件用命令行:<code>java -jar &lt;HMCL名称&gt;.jar</code><br>打开后:<br><img src="https://img-blog.csdnimg.cn/20200415132717126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果买了正版号，登录方式改为正版&#x2F;微软登录，填写邮箱及密码即可。<br>如果选择离线，那么只能玩单人世界，不能玩多人世界(除非那些不需要正版验证的服务器)。<br>特色:</p>
-<blockquote>
-<p>六年历史<br><strong>多系统支持</strong><br>全新界面<br><strong>自动安装Fabic、Forge、Liteloader、Optifine</strong><br>个性化主题<br>生成启动脚本:<br><img src="https://img-blog.csdnimg.cn/20200515162039446.png" alt="在这里插入图片描述"></p>
-</blockquote>
-<h2 id="2-MultiMC"><a href="#2-MultiMC" class="headerlink" title="2.MultiMC"></a>2.MultiMC</h2><p>下载地址:<a target="_blank" rel="noopener" href="https://multimc.org/#Download">https://multimc.org/#Download</a><br>下载完是一个zip文件，全部解压即可。<br>然后打开MultiMC.exe。<br><strong>第一次运行</strong><br>Language找到最下面选择<code>简体中文</code>即可。<br>然后选择javaw路径。<br>需要到<code>设置--&gt;账号--&gt;添加</code>添加账户。<br><img src="https://img-blog.csdnimg.cn/20200415133811858.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L29yYW5nZWJlbmNoMTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后添加一个版本后点击版本就可以玩了。</p>
-<blockquote>
-<p>Manage multiple instances of Minecraft at once<br>Start Minecraft with a custom resolution<br>Change Java’s runtime options (including memory options)<br>Shows Minecraft’s console output in a colour coded window<br>Kill Minecraft easily if it crashes &#x2F; freezes<br>Custom icons and groups for instances<br>Forge integration (automatic installation, version downloads, mod management)<br>Minecraft world management<br>Import and export Minecraft instances to share them with anyone<br>Supports every version of Minecraft that the vanilla launcher does<br>(我把官网的简介拷贝下来了)<br>机翻:<br>一次管理多个<code>Minecraft</code>实例<br>使用自定义分辨率启动<code>Minecraft</code><br>更改<code>Java</code>的运行时选项 (包括内存选项)<br>在彩色编码窗口中显示<code>Minecraft</code>的控制台输出<br>如果<code>Minecraft</code>崩溃或未响应, 很容易关闭它<br>实例的自定义图标和组<br><code>Forge</code>集成 (自动安装、版本下载、模组管理)<br>世界管理<br>导入和导出<code>Minecraft</code>实例以与任何人共享<br>支持别的启动器能做的每个版本的<code>Minecraft</code></p>
-</blockquote>
-<h2 id="3-PCL2"><a href="#3-PCL2" class="headerlink" title="3.PCL2"></a>3.PCL2</h2><p><a target="_blank" rel="noopener" href="https://afdian.net/@LTCat">https://afdian.net/@LTCat</a><br>顺便说一下，觉得还行记得给龙腾猫跃赞助一下qwq<br>运行<br><img src="https://img-blog.csdnimg.cn/85ff7bde83914b7c99554f0946bd3a8b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMjM0NUV4cGxvcmVy,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://2345explorer.github.io/2022/05/04/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A8%E5%99%A8/" data-id="cl2zmd5ha0000a8vj9whw3pp7" data-title="MC基础教程#1-关于启动器" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MC/" rel="tag">MC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag">MC基础教程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-手工制作使用WinXShell的PE-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-手工制作使用WinXShell的PE-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/03/11/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE-1/" class="article-date">
   <time class="dt-published" datetime="2022-03-11T14:43:57.000Z" itemprop="datePublished">2022-03-11</time>
@@ -139,8 +103,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/11/%E6%89%8B%E5%B7%A5%E5%88%B6%E4%BD%9C%E4%BD%BF%E7%94%A8WinXShell%E7%9A%84PE-1/">手工制作使用WinXShell的PE</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      手工制作使用WinXShell的PE
     </h1>
   
 
@@ -196,11 +160,23 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
+  
+    <a href="/2022/05/04/MC%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A8%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          MC基础教程#1-关于启动器
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 
 </section>
